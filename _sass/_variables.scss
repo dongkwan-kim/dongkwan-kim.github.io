@@ -55,11 +55,12 @@ $darker-gray                : mix(#000, $gray, 60%);
 $light-gray                 : mix(#fff, $gray, 50%);
 $lighter-gray               : mix(#fff, $gray, 90%);
 
-$my-primary-color: #E3A397;
-$my-secondary-color: #F2E4E4;
+// https://colorhunt.co/palette/446a4682a284e4aec5ffc4dd
+$my-primary-color: #82A284;
+$my-secondary-color: #E4AEC5;
 
-$body-color                 : #16181c;
-$background-color           : #16181c;
+$body-color                 : #161c16;
+$background-color           : $body-color;
 $code-background-color      : #000000;
 $code-background-color-dark : $light-gray;
 $text-color                 : #ffffffbf;
@@ -96,8 +97,8 @@ $xing-color                 : #006567;
 
 /* links */
 $link-color                 : $my-primary-color;
-$link-color-hover           : mix(#fff, $link-color, 50%);
-$link-color-visited         : mix(#000, $link-color, 25%);
+$link-color-hover           : mix(#fff, $my-secondary-color, 40%);
+$link-color-visited         : mix(#000, $my-secondary-color, 25%);
 $masthead-link-color        : #fff;
 $masthead-link-color-hover  : mix(#000, $masthead-link-color, 25%);
 

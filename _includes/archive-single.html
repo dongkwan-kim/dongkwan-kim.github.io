@@ -70,9 +70,9 @@
       <!-- <p><a href=" {{ post.paperurl }} ">PDF</a></p> -->
     {% endif %}
 
-    {% if post.paperurl %}
+    {% if post.paperurl or post.arxivurl or post.codeurl or post.dataurl or post.posterurl or post.slideurl %}
     <p class="link-buttons">
-      <a href=" {{ post.paperurl }} " target="_blank">Paper</a>
+      {% if post.paperurl %}<a href=" {{ post.paperurl }} " target="_blank">Paper</a>{% endif %}
       {% if post.arxivurl %}<a href=" {{ post.arxivurl }} " target="_blank">arXiv</a>{% endif %}
       {% if post.codeurl %}<a href=" {{ post.codeurl }} " target="_blank">Code</a>{% endif %}
       {% if post.dataurl %}<a href=" {{ post.dataurl }} " target="_blank">Data</a>{% endif %}

@@ -2,12 +2,12 @@ _site/
 */cv/*.tex
 *.xlsx
 
-
 # Created by https://www.gitignore.io/api/vim,code,macos,jekyll,python,pycharm+all
 # Edit at https://www.gitignore.io/api/vim,code,macos,jekyll,python,pycharm+all
 
 ### Code ###
 .vscode/*
+.vscode
 !.vscode/settings.json
 !.vscode/tasks.json
 !.vscode/launch.json

@@ -5,6 +5,15 @@
   .link-buttons {
     margin: 0 0 0.8em;
   }
+  .publication-venue {
+    color: $text-color;
+  }
+  a.publication-venue:hover,
+  a.publication-venue:active {
+    outline: 0;
+    color: $link-color-hover;
+    transition: all .1s ease;
+  }
 }
 
 .linear-wipe {

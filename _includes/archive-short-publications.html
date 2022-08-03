@@ -4,7 +4,7 @@
     {{post.authors | replace: "Dongkwan Kim", "<strong>Dongkwan Kim</strong>"}}.
     <a href="{{base_path}}{{post.permalink}}">"{{post.title}}"</a>,
     {% if post.venueurl %}
-      <a href="{{post.venueurl}}"><em>{{post.venue}}</em></a>, 
+      <a href="{{post.venueurl}}" class="publication-venue"><em>{{post.venue}}</em></a>, 
     {% else %}
       <em>{{post.venue}}</em>, 
     {% endif %}

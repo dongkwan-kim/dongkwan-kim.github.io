@@ -74,7 +74,8 @@ def _build_cvpubs(sheet: Spreadsheet, sheet_path_list: List[str], tab_name: str,
 
                 _authors = r.authors.replace(me, rf"\textbf{{{me}}}")
                 _year = datetime.strptime(r.date, "%Y-%m-%d").strftime("%Y")
-                _pub = rf'[{_prefix}] {_authors}. \href{{{r.paperurl}}}{{``{r.title}."}} \textit{{{r.venue}}}. {_year}'
+                url = r.paperurl or r.arxivurl
+                _pub = rf'[{_prefix}] {_authors}. \href{{{url}}}{{``{r.title}."}} \textit{{{r.venue}}}. {_year}'
                 lines += [rf"  \cvpub{{{_pub}}}", "\n" * 2]
             lines += [r"\end{cvpubs}", "\n" * 2]
 

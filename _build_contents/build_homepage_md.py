@@ -25,7 +25,10 @@ def _build_md_files(sheet: Spreadsheet, sheet_path_list: List[str], name: str, o
     tab = get_tab_df(sheet, sheet_path_list, name)
     for i, r in tab.iterrows():
         ym = re.compile(r"\d\d\d\d-\d\d").search(r.date).group()
-        sv = re.compile(r"\((.*?)\)").search(r.venue).group(1)
+        try:
+            sv = re.compile(r"\((.*?)\)").search(r.venue).group(1)
+        except AttributeError:
+            sv = r.venue
         file_name = f"{ym}-{sv.replace(' ', '-').lower()}.md"
         file_path = os.path.join(output_dir, file_name)
 

@@ -3,7 +3,12 @@
   <p class="publication-text">
     {{post.authors | replace: "Dongkwan Kim", "<strong>Dongkwan Kim</strong>"}}.
     <a href="{{base_path}}{{post.permalink}}">"{{post.title}}"</a>,
-    <a href="{{post.venueurl}}"><em>{{post.venue}}</em></a>, {{post.date | date: "%Y"}}
+    {% if post.venueurl %}
+      <a href="{{post.venueurl}}"><em>{{post.venue}}</em></a>, 
+    {% else %}
+      <em>{{post.venue}}</em>, 
+    {% endif %}
+    {{post.date | date: "%Y"}}
   </p>
   {% if post.paperurl or post.arxivurl or post.codeurl or post.dataurl or post.posterurl or post.slideurl %}
   <p class="link-buttons">

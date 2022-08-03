@@ -15,7 +15,7 @@ author_profile: true
 
 {% include base_path %}
 
-{% assign publication_groups = site.publications | group_by: "type" %}
+{% assign publication_groups = site.publications | sort: "type" | group_by: "type" %}
 {% for publications in publication_groups %}
   <h2 class="archive__subtitle">{{publications.name | capitalize}}</h2>
   {% assign prefix = publications.name | slice: 0 | capitalize %}

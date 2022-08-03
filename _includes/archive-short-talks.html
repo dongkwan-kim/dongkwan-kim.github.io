@@ -3,7 +3,12 @@
   <p class="publication-text">
     {{post.presenters | replace: "Dongkwan Kim", "<strong>Dongkwan Kim</strong>"}}.
     "{{post.title}}",
-    <em><a href="{{post.venueurl}}">{{post.venue}}</a></em>, {{post.date | date_to_string }}
+    {% if post.venueurl %}
+      <a href="{{post.venueurl}}"><em>{{post.venue}}</em></a>, 
+    {% else %}
+      <em>{{post.venue}}</em>, 
+    {% endif %}
+    {{post.date | date: "%Y"}}
   </p>
   {% if post.slideurl or post.videourl %}
   <p class="link-buttons">

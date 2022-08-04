@@ -44,5 +44,5 @@ I am a third-year Ph.D. student at [KAIST School of Computing](https://cs.kaist.
 
 ## Open Source Contributions
 
-- [PyG (PyTorch Geometric)](https://github.com/pyg-team/pytorch_geometric/graphs/contributors)
+- [PyG (PyTorch Geometric): Graph Neural Network Library for PyTorch](https://github.com/pyg-team/pytorch_geometric/graphs/contributors)
 

@@ -8,6 +8,7 @@ venue: 'International Conference on Information and Knowledge Management (CIKM, 
 type: 'conference'
 summary: ''
 venueurl: 'https://www.cikm2022.org/'
+arxivurl: 'https://arxiv.org/abs/2209.00508'
 codeurl: 'https://github.com/dongkwan-kim/PSI'
 ---
 

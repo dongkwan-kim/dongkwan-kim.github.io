@@ -8,7 +8,7 @@ redirect_from:
   - /about.html
 ---
 
-I am a third-year Ph.D. student at [KAIST School of Computing](https://cs.kaist.ac.kr/), advised by [Alice Oh](https://aliceoh9.github.io/). My research interests are in developing graph neural networks for various domains: social networks, codes, or chemicals. In particular, I focus on (1) leveraging the inherent information in the graph structure (e.g., edges, subgraphs, and the global graph) and (2) analyzing the model performance by characteristics of graph datasets (e.g., homophily, average degree, or density).
+I am a fourth-year Ph.D. student at [KAIST School of Computing](https://cs.kaist.ac.kr/), advised by [Alice Oh](https://aliceoh9.github.io/). My research interests are in developing graph neural networks for various domains: social networks, codes, or chemicals. In particular, I focus on (1) leveraging the inherent information in the graph structure (e.g., edges, subgraphs) and (2) analyzing the model performance by characteristics of graph datasets (e.g., homophily, average degree, or density).
 
 ## Recent Publications
 
@@ -31,7 +31,7 @@ I am a third-year Ph.D. student at [KAIST School of Computing](https://cs.kaist.
 
 ## Academic Services
 
-- Reviewer: ICLR ([2020](https://iclr.cc/Conferences/2020), [2022](https://iclr.cc/Conferences/2022/Reviewers)), ICML GRL+ Workshop ([2020](https://grlplus.github.io/pcom/)), ACL ARR ([2021](https://openreview.net/group?id=aclweb.org/ACL/ARR/2021)), ICLR GTRL Workshop ([2022](https://gt-rl.github.io/)), NeurIPS ([2022](https://neurips.cc/Conferences/2022))
+- Reviewer: ICLR ([2020](https://iclr.cc/Conferences/2020), [2022](https://iclr.cc/Conferences/2022/Reviewers)), ICML GRL+ Workshop ([2020](https://grlplus.github.io/pcom/)), ACL ARR ([2021](https://openreview.net/group?id=aclweb.org/ACL/ARR/2021)), ICLR GTRL Workshop ([2022](https://gt-rl.github.io/)), NeurIPS ([2022](https://neurips.cc/Conferences/2022)), LoG ([2022](https://logconference.org/))
 - Student volunteer: ICLR Social ML in Korea ([2020](https://twitter.com/aliceoh/status/1256032213226815488)), ICLR ([2021](https://iclr.cc/Conferences/2021/Volunteers))
 - Organizer: KAIST AI Workshop ([21/22](https://mars-ai.github.io/kaist-ai-workshop-2122))
 - Contributor: KAIST ILP Tech ([March 2022](https://ilp.kaist.ac.kr/ebook/220325/index.html))

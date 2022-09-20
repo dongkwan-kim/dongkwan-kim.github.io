@@ -11,4 +11,4 @@ summary: ""
 1. `\renewcommand{\arraystretch}{X}` (for tables, X < 1)
 1. `{\small ... }`
 1. `\resizebox{\columnwidth}{!}{ ... }`
-1. `\scale[X]{ }` (for equations, X < 1)
+1. `\newcommand*{\scale}[2][4]{\scalebox{#1}{$#2$}}` + `\scale[X]{ }` (for equations, X < 1)

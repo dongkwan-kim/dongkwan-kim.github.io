@@ -2,11 +2,19 @@
 
 ## Instructions from [dongkwan-kim](https://github.com/dongkwan-kim)
 
-1. Create [credentials](https://docs.gspread.org/en/v4.0.1/oauth2.html#oauth-client-id) and put it to `~/.config/gspread/credentials.json`.
-2. Install `_build_contents/requirements.txt`.
-3. Update [Data for CV](https://docs.google.com/spreadsheets/d/1QeeQhPYIeTiCTJNczKSfenHCYGMLf3a2vvzCor1Gd2A/edit#gid=1901573817).
-4. Run `_build_contents/build_homepage_md.py`.
+1. Install `./_build_contents/requirements.txt`.
+2. Update [Data for CV (Dongkwan Kim)](https://docs.google.com/spreadsheets/d/1QeeQhPYIeTiCTJNczKSfenHCYGMLf3a2vvzCor1Gd2A/edit#gid=1901573817).
+3. Set up spreadsheet-to-markdown pipelines.
+ - Create [credentials](https://docs.gspread.org/en/v4.0.1/oauth2.html#oauth-client-id) and put it to `~/.config/gspread/credentials.json`.
+ - Or download 'Data for CV (Dongkwan Kim).xlsx' into `./build_contents`.
+4. Run `./_build_contents/build_homepage_md.py` (for the homepage) and `./_build_contents/build_cv_tex.py` (for the CV).
 5. Commit the changes.
+
+## Hard-Coded Customization
+
+- Color themes: `./_sass/_variables.scss#L58`.
+- Blogs: `./_posts`.
+- Google AdSense: `./_includes/adsense.html` and `./ads.txt`.
 
 ## Original Readme
 

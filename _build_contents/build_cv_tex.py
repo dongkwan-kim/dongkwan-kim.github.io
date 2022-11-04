@@ -145,8 +145,11 @@ def _build_cvhonor(sheet: Spreadsheet, sheet_path_list: List[str], tab_name: str
             elif ik < 3:
                 _l = f"{{{getattr(r, k)}}} % {k}"
             else:  # date
-                _d = datetime.strptime(getattr(r, k), "%Y-%m-%d").strftime(out_date_format)
-                _l = f"{{{_d}}} % {k}"
+                try:
+                    _d = datetime.strptime(getattr(r, k), "%Y-%m-%d").strftime(out_date_format)
+                    _l = f"{{{_d}}} % {k}"
+                except ValueError:
+                    _l = f"{{{getattr(r, k)}}} % {k}"  # date but not %Y-%m-%d
             lines += [" " * 4, _l, "\n"]
 
         lines.append("\n")

@@ -143,7 +143,11 @@ def _build_cvhonor(sheet: Spreadsheet, sheet_path_list: List[str], tab_name: str
             if k is None:
                 _l = "{} % None"
             elif ik < 3:
-                _l = f"{{{getattr(r, k)}}} % {k}"
+                if k == "title" and r.url != "":
+                    tex_link = f"\\href{{{r.url}}}{{{getattr(r, k)}}}"
+                    _l = f"{{{tex_link}}} % {k}"
+                else:
+                    _l = f"{{{getattr(r, k)}}} % {k}"
             else:  # date
                 try:
                     _d = datetime.strptime(getattr(r, k), "%Y-%m-%d").strftime(out_date_format)

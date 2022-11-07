@@ -89,10 +89,11 @@ def build_about(sheet: Spreadsheet, sheet_path_list: List[str],
 
     def _honors(df: pd.DataFrame):
         for i, r in df.iterrows():
+            dobj = datetime.strptime(r.date, "%Y-%m-%d")
             if r.url == "":
-                lines.append(f"- {r.title}, *{r.organization}*, {r.date}\n")
+                lines.append(f"- {r.title}, *{r.organization}*, {dobj.strftime('%Y')}\n")
             else:
-                lines.append(f"- [{r.title}]({r.url}), *{r.organization}*, {r.date}\n")
+                lines.append(f"- [{r.title}]({r.url}), *{r.organization}*, {dobj.strftime('%Y')}\n")
 
     def _open_source_contributions(df: pd.DataFrame):
         for i, r in df.iterrows():

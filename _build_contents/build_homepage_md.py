@@ -105,7 +105,7 @@ def build_about(sheet: Spreadsheet, sheet_path_list: List[str],
     about = get_tab_df(sheet, sheet_path_list, "about-page")
     for idx, about_row in about.iterrows():
 
-        if about_row.use == "FALSE":
+        if not bool(about_row.use):
             continue
 
         elif about_row.type == "text":

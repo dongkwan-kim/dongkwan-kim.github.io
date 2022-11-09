@@ -50,23 +50,26 @@ Now attach your container.
 docker attach $container_name
 ```
 
-In the container, install whatever you need.
+In the container, install whatever you need. Below is my preferred list, but do not forget to install the following packages: `openssh-server ssh`.
 ```bash
 # In the container of the remote machine,
 apt-get update
-apt-get install vim git openssh-server ssh sudo curl screen software-properties-common
+apt-get install vim git sudo curl screen software-properties-common
+apt-get install openssh-server ssh  # important!
+
+# To install python 3.7. If you do not want to use python3.7, you can skip it, or install other versions.
 add-apt-repository ppa:deadsnakes/ppa
 apt-get update
 apt-get install python3.7 python3-pip python3.7-dev
 ```
 
-You might want to login the container with a password, then turn off `PubkeyAuthentication`.
+You might want to login the container with a password, then turn off `PubkeyAuthentication`. If you skip this step, you cannot log in to your container with your id and password.
 ```bash
 # In the container of the remote machine,
 sed 's/PubkeyAuthentication/#PubkeyAuthentication/g' /etc/ssh/sshd_config > ~/sshd_config.tmp
 cat ~/sshd_config.tmp > /etc/ssh/sshd_config
 rm ~/sshd_config.tmp
-service ssh restart
+service ssh restart  # important!
 ```
 
 Create a user account and make it a root.
@@ -87,3 +90,8 @@ ssh -p $ssh_port $user_name@$host
 ``` 
 
 If you want to use a Tensorboard or Jupyter, please follow [my other post](/blogs/tensorboard-in-a-docker-container/).
+
+
+## Troubleshooting
+
+- I cannot log in my containers after restarting them: You have to run `service ssh restart` after restarting containers.

@@ -13,8 +13,9 @@ Some of the content focuses on using NVIDIA GPUs, so you can omit the details if
 ## Preliminary
 
 - In this article, your server will be a remote machine (or host machine) and your laptop will be a local machine.
-- You have to install the Docker first in your remote machine. (Or ask the root to do this).
+- You have to install the Docker first on your remote machine. (Or ask the root to do this).
 - You do not have to be a root of the host machine to follow this post.
+- But you have to know what Docker is and how it works. See overview documentations: [[English]](https://docs.docker.com/get-started/overview/) [[Korean]](https://smjeon.dev/etc/docker-overview/).
 
 ## Instruction
 

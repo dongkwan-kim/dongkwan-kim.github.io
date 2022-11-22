@@ -34,7 +34,7 @@ i = N - 1 - np.floor((-1 + np.sqrt((2 * N + 1) ** 2 - 8 * (X + 1))) / 2)
 j = X - i * (2 * N - i - 1) // 2
 ```
 
-My sincere friend, Chaehwan Song, explained to me how the above equations are derived. With her permission, I describe her solution in this post.
+My sincere friend, [Chaehwan Song](https://www.epfl.ch/labs/lions/people/phds/chaehwan-song/), explained to me how the above equations are derived. With her permission, I describe her solution in this post.
 
 ![upper-matrix](/images/upper-matrix.png)
 

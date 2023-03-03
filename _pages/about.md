@@ -8,7 +8,7 @@ redirect_from:
   - /about.html
 ---
 
-I am a fourth-year Ph.D. student at the KAIST School of Computing, advised by Alice Oh. My research interests are in developing models for learning representations of structured and unstructured knowledge. In particular, I have focused on (1) leveraging the inherent structures (e.g., edges and subgraphs) to learn graph-structured data [[1](https://dongkwan-kim.github.io/publications/2021-05-iclr), [2](https://dongkwan-kim.github.io/publications/2022-10-cikm)], (2) designing new structures for efficient representation learning of subgraphs [[3](https://dongkwan-kim.github.io/publications/2022-04-iclr-gtrl)], and (3) discovering structures from texts and knowledge graphs.
+I am a fourth-year Ph.D. student at the [KAIST](https://www.kaist.ac.kr/en) [School of Computing](https://cs.kaist.ac.kr), advised by [Alice Oh](https://aliceoh9.github.io/). My research interests are in developing models for learning representations of structured and unstructured knowledge. In particular, I have focused on (1) leveraging the inherent structures (e.g., edges and subgraphs) to learn graph-structured data [[1](https://dongkwan-kim.github.io/publications/2021-05-iclr), [2](https://dongkwan-kim.github.io/publications/2022-10-cikm)], (2) designing new structures for efficient representation learning of subgraphs [[3](https://dongkwan-kim.github.io/publications/2022-04-iclr-gtrl)], and (3) discovering structures from texts and knowledge graphs.
 
 ## Recent Publications ([See all](/publications))
 

@@ -51,10 +51,10 @@ Use Grammarly on Chrome.
 This plugin displays your text in a textarea so you can use spellcheck plugins like Grammarly.
 (It may not be that effective if your paper contains a bunch of equations.)
 
-## For Koreans
+### [open-in-overleaf](https://chrome.google.com/webstore/detail/open-in-overleaf/oikhlgfcmfbbdjbeeaplalpfdgijbdji)
+Access the LaTeX source code of arXiv papers on Overleaf.
 
-### [ShowAsIs](https://chrome.google.com/webstore/detail/showasis/lehpimiaaocmlkoebjgkokglapbadpdh)
-Use CJK fonts in google slides.
+## For Koreans
 
 ### [Find Korea from Dropdowns](https://chrome.google.com/webstore/detail/find-korea-from-dropdowns/lfphjcfkgaiiojhbippbghhdikoibedi)
 Find Korea when you go to academic conferences.

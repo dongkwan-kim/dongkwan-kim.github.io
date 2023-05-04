@@ -95,4 +95,33 @@ If you want to use a Tensorboard or Jupyter, please follow [my other post](/blog
 
 ## Troubleshooting
 
-- I cannot log in my containers after restarting them: You have to run `service ssh restart` after restarting containers.
+### I cannot log in my containers after restarting them
+
+You have to run `service ssh restart` after restarting containers.
+
+### I cannot log in with given ports
+
+If you see this warning:
+```text
+WARNING: IPv4 forwarding is disabled. Networking will not work
+```
+
+Run `sudo vi /etc/sysctl.conf` and add `net.ipv4.ip_forward=1`.
+```text
+# sysctl settings are defined through files in
+# /usr/lib/sysctl.d/, /run/sysctl.d/, and /etc/sysctl.d/.
+#
+# Vendors settings live in /usr/lib/sysctl.d/.
+# To override a whole file, create a new file with the same in
+# /etc/sysctl.d/ and put new settings there. To override
+# only specific settings, add a file with a lexically later
+# name in /etc/sysctl.d/ and put new settings there.
+#
+# For more information, see sysctl.conf(5) and sysctl.d(5).
+
+net.ipv4.ip_forward=1  # Here!
+```
+Then, restart network.
+```bash
+sudo systemctl restart network
+```

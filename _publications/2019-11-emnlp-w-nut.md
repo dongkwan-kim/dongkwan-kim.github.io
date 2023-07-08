@@ -1,5 +1,5 @@
 ---
-selected: 'False'
+selected: ''
 title: 'Additive Compositionality of Word Vectors'
 authors: 'Yeon Seonwoo, Sungjoon Park, Dongkwan Kim, and Alice Oh'
 collection: 'publications'

@@ -1,5 +1,5 @@
 ---
-selected: 'True'
+selected: '2.0'
 title: 'Efficient Representation Learning of Subgraphs by Subgraph-To-Node Translation'
 authors: 'Dongkwan Kim and Alice Oh'
 collection: 'publications'

@@ -1,5 +1,5 @@
 ---
-selected: 'False'
+selected: ''
 title: 'Supervised Graph Attention Network for Semi-Supervised Node Classification'
 authors: 'Dongkwan Kim and Alice Oh'
 collection: 'publications'

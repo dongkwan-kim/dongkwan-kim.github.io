@@ -98,6 +98,7 @@ def _build_cvpubs(sheet: Spreadsheet, sheet_path_list: List[str], tab_name: str,
             _o_ys = []
             for o, rs in o_to_rs.items():
                 _years = [f"{r.year}" if r.url == "" else rf"\href{{{r.url}}}{{{r.year}}}" for r in rs]
+                _years = [y.replace("#", "\#") for y in _years]
                 _o_ys.append(f"{o} ({', '.join(_years)})")
             one_line = rf"\textbf{{{p}:}} {', '.join(_o_ys)}"
             lines.append(rf"  \cvpub{{{one_line}}}" + "\n" * 2)

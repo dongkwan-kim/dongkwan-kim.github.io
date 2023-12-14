@@ -12,7 +12,7 @@ def save_lines(lines, output_dir, output_name):
         print(f"Save at {full_path}")
 
 
-def change_md_href_to_text_href(md: str) -> str:
+def change_md_href_to_tex_href(md: str) -> str:
     for text, link in re.findall(r"\[(.+?)\]\((.+?)\)", md):
         tex_link = f"\\href{{{link}}}{{{text}}}"
         md_link = f"[{text}]({link})"
@@ -20,11 +20,36 @@ def change_md_href_to_text_href(md: str) -> str:
     return md
 
 
+def change_md_list_to_tex_list(md_one_paragraph: str) -> str:
+    tmp = md_one_paragraph
+    md_one_paragraph = re.sub(r"\n- ", "\n  \\\item ", md_one_paragraph)
+    md_one_paragraph = re.sub(r"^- ", "  \\\item ", md_one_paragraph)
+    if tmp == md_one_paragraph:
+        return tmp
+    else:
+        assert "\n\n" not in md_one_paragraph
+        return "\n".join([r"\begin{itemize}", md_one_paragraph, r"\end{itemize}"])
+
+
+def change_md_formatting_to_tex_formatting(md: str) -> str:
+
+    md = re.sub(r'\*\*(.+)\*\*', r'\\textbf{\1}', md)
+    md = re.sub(r'\*(.+)\*', r'\\textit{\1}', md)
+    return md
+
+
+def change_md_to_tex(md: str) -> str:
+    md = change_md_formatting_to_tex_formatting(md)
+    md = change_md_href_to_tex_href(md)
+    md = change_md_list_to_tex_list(md)
+    return md
+
+
 def _build_about_text(sheet: Spreadsheet, sheet_path_list: List[str], tab_name: str):
     tab = get_tab_df(sheet, sheet_path_list, tab_name)
     lines = [rf"\cvsection{{{tab_name.title()}}}", "\n" * 2, r"{\small", "\n" * 2]
     for i, r in tab.iterrows():
-        tex_text = change_md_href_to_text_href(r.text)
+        tex_text = change_md_to_tex(r.text)
         lines += [tex_text, "\n" * 2]
     lines += ["}", "\n" * 2, r"\hfill \break"]
     return lines

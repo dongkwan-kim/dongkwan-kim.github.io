@@ -13,7 +13,7 @@ def save_lines(lines, output_dir, output_name):
 
 
 def change_md_href_to_tex_href(md: str) -> str:
-    for text, link in re.findall(r"\[(.+?)\]\((.+?)\)", md):
+    for text, link in re.findall(r"\[([\w|\s]+?)\]\((.+?)\)", md):
         tex_link = f"\\href{{{link}}}{{{text}}}"
         md_link = f"[{text}]({link})"
         md = md.replace(md_link, tex_link)

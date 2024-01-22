@@ -8,7 +8,9 @@ redirect_from:
   - /about.html
 ---
 
-I am a fourth-year Ph.D. student at the [KAIST](https://www.kaist.ac.kr/en) [School of Computing](https://cs.kaist.ac.kr), advised by [Alice Oh](https://aliceoh9.github.io/). My research interests are in developing models for learning representations of structured and unstructured knowledge. In particular, I have focused on (1) leveraging the inherent structures (e.g., edges and subgraphs) to learn graph-structured data [[1](https://dongkwan-kim.github.io/publications/2021-05-iclr), [2](https://dongkwan-kim.github.io/publications/2022-10-cikm)], (2) designing new structures for efficient representation learning of subgraphs [[3](https://dongkwan-kim.github.io/publications/2022-04-iclr-gtrl)], and (3) discovering structures from texts and knowledge graphs.
+I am a Ph.D. student at the [KAIST](https://www.kaist.ac.kr/en) [School of Computing](https://cs.kaist.ac.kr), advised by [Alice Oh](https://aliceoh9.github.io/). My research interests are in learning representations of structured and unstructured knowledge. In particular, I have focused on (1) leveraging the inherent structures (e.g., edges and subgraphs) to learn graph-structured data [[C2](https://dongkwan-kim.github.io/publications/2021-05-iclr), [C3](https://dongkwan-kim.github.io/publications/2022-10-cikm)] and (2) designing a new data structure for efficient representation learning of subgraphs [[P1](https://openreview.net/forum?id=BeuTCoe3bf), [W3](https://dongkwan-kim.github.io/publications/2022-04-iclr-gtrl)].
+
+Presently, my focus lies in the retrieval and integration of external structured data into language models. Specifically, I am exploring how diverse data types, beyond texts, can enhance the factuality and interpretability of language models. Plus, I am working on the application of machine learning models where domain knowledge is crucial such as medicine.
 
 ## Recent Publications ([See all](/publications))
 

@@ -8,9 +8,7 @@ redirect_from:
   - /about.html
 ---
 
-I am a Ph.D. student at the [KAIST](https://www.kaist.ac.kr/en) [School of Computing](https://cs.kaist.ac.kr), advised by [Alice Oh](https://aliceoh9.github.io/). My research interests are in learning representations of structured and unstructured knowledge. In particular, I have focused on (1) leveraging the inherent structures (e.g., edges and subgraphs) to learn graph-structured data [[C2](https://dongkwan-kim.github.io/publications/2021-05-iclr), [C3](https://dongkwan-kim.github.io/publications/2022-10-cikm)] and (2) designing a new data structure for efficient representation learning of subgraphs [[P1](https://arxiv.org/abs/2204.04510v2), [W3](https://dongkwan-kim.github.io/publications/2022-04-iclr-gtrl)].
-
-Presently, my focus lies in the retrieval and integration of external structured data into language models. Specifically, I am exploring how diverse data types, beyond texts, can enhance the factuality and interpretability of language models. Plus, I am working on the application of machine learning models where domain knowledge is crucial such as medicine.
+I am a Ph.D. student at the [KAIST](https://www.kaist.ac.kr/en) [School of Computing](https://cs.kaist.ac.kr), advised by [Alice Oh](https://aliceoh9.github.io/). My research interests are in learning representations of structured and unstructured knowledge. In particular, I have focused on (1) leveraging the inherent structures (e.g., edges and subgraphs) to learn graph-structured data [[C2](https://openreview.net/forum?id=Wi5KUNlqWty), [C3](https://dl.acm.org/doi/10.1145/3511808.3557647)] and (2) designing a new data structure for efficient representation learning of subgraphs [[C4](https://arxiv.org/abs/2204.04510), [W3](https://openreview.net/forum?id=BgLaE-k6gc)].
 
 ## Recent Publications ([See all](/publications))
 

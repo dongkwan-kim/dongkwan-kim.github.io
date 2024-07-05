@@ -1,6 +1,9 @@
 {% include base_path %}
 <div class="publication">
   <p class="publication-text">
+    {% if prefix %}
+      [{{prefix}}{{prefix_index}}]
+    {% endif %}
     {{post.authors | replace: "Dongkwan Kim", "<strong>Dongkwan Kim</strong>"}}.
     <a href="{{base_path}}{{post.permalink}}">"{{post.title}}"</a>,
     {% if post.venueurl %}

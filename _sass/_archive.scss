@@ -15,6 +15,9 @@
     transition: all .1s ease;
   }
 }
+.publication-text:not(:has(+ .link-buttons)) {
+  margin-bottom: 0.8em;
+}
 
 .linear-wipe {
   // https://codepen.io/shshaw/pen/YpERQQ

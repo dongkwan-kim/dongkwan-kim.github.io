@@ -10,7 +10,7 @@ redirect_from:
 
 I am a Ph.D. student at the [KAIST](https://www.kaist.ac.kr/en) [School of Computing](https://cs.kaist.ac.kr), advised by [Alice Oh](https://aliceoh9.github.io/). My research interests are in learning representations of structured and unstructured knowledge using GNNs and LLMs. In particular, I have focused on (1) leveraging the inherent structures (e.g., edges and subgraphs) to learn graph-structured data [[C2](https://openreview.net/forum?id=Wi5KUNlqWty), [C3](https://dl.acm.org/doi/10.1145/3511808.3557647)] and (2) designing a new data structure for efficient representation learning of subgraphs [[C4](https://arxiv.org/abs/2204.04510)].
 
-My ongoing research focuses on the intersection of Graph and Language Models, including GNNs/LLMs for personalization, multi-culture awareness, lobby networks in the United States, and single-cell RNA sequencing.
+My ongoing research focuses on the intersection of Graph and Language Models, including LLMs/GNNs on multi-culture awareness, single-cell RNA-seq data, logical validity, and multi-turn dialogue evaluation.
 
 ## Recent Publications ([See all](/publications))
 

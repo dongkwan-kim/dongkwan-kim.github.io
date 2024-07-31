@@ -7,6 +7,6 @@ venue: 'IBS Data Science Group Seminar'
 date: '2022-09-16'
 location: 'Online'
 venueurl: 'https://ds.ibs.re.kr/events/category/seminar/'
-slideurl: 'https://drive.google.com/file/d/14UfxWvQ_TTYOQ2QSYHl15JEKfznprzr1/view?usp=sharing'
+slideurl: 'https://docs.google.com/presentation/d/1lnRtZ9PWlbwSDYQibOh7B6qCww81Ea4I-LuFueh7A2A/edit#slide=id.gfab3552d54_0_1'
 ---
 

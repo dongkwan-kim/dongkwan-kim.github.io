@@ -24,7 +24,7 @@ My ongoing research focuses on the intersection of Graph and Language Models, in
 - M.S. School of Computing, *KAIST*, Sep 2019
 - B.S. Major in Computer Science and Minor in Chemistry, *KAIST*, Feb 2018
 
-## Talks
+## Talks & Presentations
 
 {% assign reversed_talks = site.talks | reverse %}
 {% for post in reversed_talks limit:7 %}

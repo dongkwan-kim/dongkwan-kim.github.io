@@ -29,7 +29,7 @@ def _build_md_files(sheet: Spreadsheet, sheet_path_list: List[str], name: str, o
             sv = re.compile(r"\((.*?)\)").search(r.venue).group(1)
         except AttributeError:
             sv = r.venue
-        file_name = f"{ym}-{sv.replace(' ', '-').lower()}.md"
+        file_name = f"{ym}-{sv.replace(' ', '-').replace('/', '').lower()}.md"
         file_path = os.path.join(output_dir, file_name)
 
         kv = [f"{k}: '{v}'\n" for k, v in r.items() if k != "contents" and not k.endswith("url")]

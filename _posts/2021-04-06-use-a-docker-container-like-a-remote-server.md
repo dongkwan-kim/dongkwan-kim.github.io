@@ -99,6 +99,18 @@ If you want to use a Tensorboard or Jupyter, please follow [my other post](/blog
 
 You have to run `service ssh restart` after restarting containers.
 
+### I did, but it does not work
+
+If you see this warning:
+
+```text
+Failed to retrieve unit state: Failed to activate service 'org.freedesktop.systemd1': timed out (service_start_timeout=25000ms)
+Failed to restart ssh.service: Failed to activate service 'org.freedesktop.systemd1': timed out (service_start_timeout=25000ms)
+See system logs and 'systemctl status ssh.service' for details.
+```
+
+Stop the container and restart it.
+
 ### I cannot log in with given ports
 
 If you see this warning:

@@ -19,7 +19,8 @@ author_profile: true
 {% for publications in publication_groups %}
   <h2 class="archive__subtitle">{{publications.name | capitalize}}</h2>
   {% assign prefix = publications.name | slice: 0 | capitalize %}
-  {% for post in publications.items reversed %}
+  {% assign sorted_items = publications.items | sort: "date", "last" %}
+  {% for post in sorted_items reversed %}
     {% assign prefix_index = forloop.length | minus: forloop.index0 %}
     {% include archive-single.html %}
   {% endfor %}

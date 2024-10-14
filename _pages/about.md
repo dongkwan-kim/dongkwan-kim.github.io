@@ -8,9 +8,11 @@ redirect_from:
   - /about.html
 ---
 
-I am a Ph.D. student at the [KAIST](https://www.kaist.ac.kr/en) [School of Computing](https://cs.kaist.ac.kr), advised by [Alice Oh](https://aliceoh9.github.io/). My research interests are in learning representations of structured and unstructured knowledge using GNNs and LLMs. In particular, I have focused on (1) leveraging the inherent structures (e.g., edges and subgraphs) to learn graph-structured data [[C2](https://openreview.net/forum?id=Wi5KUNlqWty), [C3](https://dl.acm.org/doi/10.1145/3511808.3557647)] and (2) designing a new data structure for efficient representation learning of subgraphs [[C4](https://arxiv.org/abs/2204.04510)].
+I am a Ph.D. student at the [KAIST](https://www.kaist.ac.kr/en) [School of Computing](https://cs.kaist.ac.kr), working under the supervision of Prof. [Alice Oh](https://aliceoh9.github.io/). My research focuses on learning representations of structured and unstructured knowledge using Graph Neural Networks (GNNs) and Large Language Models (LLMs).
 
-My ongoing research focuses on the intersection of Graph and Language Models, including LLMs/GNNs on multi-culture awareness, single-cell RNA-seq data, logical validity, and multi-turn dialogue evaluation.
+Specifically, I studied graph representation learning methods to leverage pairwise and higher-order interactions for graph-structured data (edges [[C2](https://openreview.net/forum?id=Wi5KUNlqWty)], partial subgraphs [[C3](https://dl.acm.org/doi/10.1145/3511808.3557647)], subgraphs [[C4](https://arxiv.org/abs/2204.04510)], and k-hop subgraphs [[P1](https://drive.google.com/file/d/1q0NrWDI8f6u-qT4r_BpOh1f6m5IuX8t_/view)]).
+
+Currently, my research explores the intersection of graph and language models, with a focus on uncovering latent structures in unstructured language data. My ongoing works are integrating GNNs and LLMs to develop multi-cultural network and language models [[W4](https://drive.google.com/file/d/1cO70oV0osExbgYB2qe9HBUKUU--uYejs/view)], searching gene interactions regulating Multiple Sclerosis from single-cell RNA-seq data, and analyzing U.S. lobbying networks.
 
 ## Recent Publications ([See all](/publications))
 

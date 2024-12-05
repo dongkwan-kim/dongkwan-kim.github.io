@@ -7,7 +7,7 @@ permalink: '/publications/2024-12-neurips-solar'
 date: '2024-12-14'
 venue: 'Workshop on Socially Responsible Language Modelling Research at NeurIPS (NeurIPS SoLaR)'
 type: 'workshop'
-summary: '*One-sentence Summary: We explore the use of in-context learning with diverse demonstrations to enhance Large Language Models' cultural understanding.*'
+summary: "*One-sentence Summary: We explore the use of in-context learning with diverse demonstrations to enhance Large Language Models' cultural understanding.*"
 venueurl: 'https://solar-neurips.github.io/'
 paperurl: 'https://openreview.net/forum?id=KsAfPGPZZn'
 ---

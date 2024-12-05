@@ -23,6 +23,13 @@ def get_tab_df(sheet: Spreadsheet, sheet_path_list: List[str], tab_name) -> pd.D
 
 def _build_md_files(sheet: Spreadsheet, sheet_path_list: List[str], name: str, output_dir):
     tab = get_tab_df(sheet, sheet_path_list, name)
+
+    def kv_escape(k, v):
+        if "'" not in str(v):
+            return f"{k}: '{v}'"
+        else:
+            return f'{k}: "{v}"'
+
     for i, r in tab.iterrows():
         ym = re.compile(r"\d\d\d\d-\d\d").search(r.date).group()
         try:
@@ -32,7 +39,7 @@ def _build_md_files(sheet: Spreadsheet, sheet_path_list: List[str], name: str, o
         file_name = f"{ym}-{sv.replace(' ', '-').replace('/', '').lower()}.md"
         file_path = os.path.join(output_dir, file_name)
 
-        kv = [f"{k}: '{v}'\n" for k, v in r.items() if k != "contents" and not k.endswith("url")]
+        kv = [f"{kv_escape(k, v)}\n" for k, v in r.items() if k != "contents" and not k.endswith("url")]
         urls = [f"{k}: '{v}'\n" for k, v in r.items() if k.endswith("url") and v != ""]
         lines = ["---\n", *kv, *urls, "---\n\n"]
         if hasattr(r, "contents"):

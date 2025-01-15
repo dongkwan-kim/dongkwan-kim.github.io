@@ -8,17 +8,19 @@ redirect_from:
   - /about.html
 ---
 
-I am a Ph.D. student at the [KAIST](https://www.kaist.ac.kr/en) [School of Computing](https://cs.kaist.ac.kr), working under the supervision of Prof. [Alice Oh](https://aliceoh9.github.io/). My research focuses on learning representations of structured and unstructured knowledge using Graph Neural Networks (GNNs) and Large Language Models (LLMs).
+I am a Ph.D. student at the [KAIST](https://www.kaist.ac.kr/en) [School of Computing](https://cs.kaist.ac.kr), working under the supervision of Prof. [Alice Oh](https://aliceoh9.github.io/). My research lies at the intersection of Graph Neural Networks (GNNs) and Large Language Models (LLMs) that leverage the vast repository of human knowledge encoded in textual form to better understand the relational and structured data present in nature. By integrating diverse data modalities, including graphs and texts, I enhance our comprehension of complex interactions and uncover novel relations in the real world, including biological, political, and social systems.
 
 Specifically, I studied graph representation learning methods to leverage pairwise and higher-order interactions for graph-structured data (edges [[C2](https://openreview.net/forum?id=Wi5KUNlqWty)], partial subgraphs [[C3](https://dl.acm.org/doi/10.1145/3511808.3557647)], subgraphs [[C4](https://arxiv.org/abs/2204.04510)], and k-hop subgraphs [[P1](https://openreview.net/forum?id=HZgZrtIreg)]).
 
 Currently, my research explores the intersection of graph and language models, with a focus on uncovering latent structures in unstructured language data. My ongoing works are (1) developing multi-cultural LLMs by leveraging relations between cultures [[W4](https://openreview.net/forum?id=KsAfPGPZZn)], (2) searching gene interactions regulating Multiple Sclerosis from single-cell RNA-seq data, and (3) membership inference attack (MIA) based on LM family trees.
 
-## Recent Publications ([See all](/publications))
+## Selected Publications ([See all](/publications))
 
-{% assign reversed_publications = site.publications | reverse %}
-{% for post in reversed_publications limit:7 %}
+{% assign publications = site.publications | sort: "selected" %}
+{% for post in publications %}
+{% if post.selected != "" %}
 {% include archive-short-publications.html %}
+{% endif %}
 {% endfor %}
 
 ## Education

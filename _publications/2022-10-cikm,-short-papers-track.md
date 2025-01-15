@@ -1,5 +1,5 @@
 ---
-selected: ''
+selected: '6.0'
 title: 'Models and Benchmarks for Representation Learning of Partially Observed Subgraphs'
 authors: 'Dongkwan Kim, Jiho Jin, Jaimeen Ahn and Alice Oh'
 collection: 'publications'

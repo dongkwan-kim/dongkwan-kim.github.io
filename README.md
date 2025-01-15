@@ -2,21 +2,17 @@
 
 ## Instructions from [dongkwan-kim](https://github.com/dongkwan-kim)
 
+### Set-up
+
 1. Install `./_build_contents/requirements.txt`.
 2. Update [Data for CV (Dongkwan Kim)](https://docs.google.com/spreadsheets/d/1QeeQhPYIeTiCTJNczKSfenHCYGMLf3a2vvzCor1Gd2A/edit#gid=1901573817).
 3. Set up spreadsheet-to-markdown pipelines.
- - Create [credentials](https://docs.gspread.org/en/v4.0.1/oauth2.html#oauth-client-id) and put it to `~/.config/gspread/credentials.json`.
- - Or download 'Data for CV (Dongkwan Kim).xlsx' into `./build_contents`.
+ - (Recommended) Download 'Data for CV (Dongkwan Kim).xlsx' into `./build_contents`.
+ - Or create [credentials](https://docs.gspread.org/en/v4.0.1/oauth2.html#oauth-client-id) and put it to `~/.config/gspread/credentials.json`.
 4. Run `./_build_contents/build_homepage_md.py` (for the homepage) and `./_build_contents/build_cv_tex.py` (for the CV).
 5. Commit the changes.
 
-## Hard-Coded Customization
-
-- Color themes: `./_sass/_variables.scss#L58`.
-- Blogs: `./_posts`.
-- Google AdSense: `./_includes/adsense.html` and `./ads.txt`.
-
-#### To run locally (not on GitHub Pages, to serve on your own computer)
+### To run locally (not on GitHub Pages, to serve on your own computer)
 
 1. Clone the repository and made updates as detailed above
 1. Make sure you have ruby-dev, bundler, and nodejs installed:
@@ -32,6 +28,13 @@
 1. Run `bundle install` to install ruby dependencies. If you get errors, delete Gemfile.lock and try again.
 1. Run `bundle exec jekyll serve` to generate the HTML and serve it from `localhost:4000` the local server will automatically rebuild and refresh the pages on change.
 
+### Hard-Coded Customization
+
+- Color themes: `./_sass/_variables.scss#L58`.
+- Blogs: `./_posts`.
+- Google AdSense: `./_includes/adsense.html` and `./ads.txt`.
+
+---
 
 ## Original Readme
 

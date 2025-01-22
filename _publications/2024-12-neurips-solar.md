@@ -1,5 +1,5 @@
 ---
-selected: '1.0'
+selected: '2.0'
 title: 'Salad-Bowl-LLM: Multi-Culture LLMs by In-Context Demonstrations from Diverse Cultures'
 authors: 'Dongkwan Kim, Junho Myung, and Alice Oh'
 collection: 'publications'

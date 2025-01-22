@@ -1,5 +1,5 @@
 ---
-selected: '2.0'
+selected: '3.0'
 title: 'Understanding Lobbying Strategies in Legislative Process: Bill Position Dataset and Lobbying Analysis'
 authors: 'Jiseon Kim, Dongkwan Kim, Joohye Jeong, In Song Kim, Alice Oh'
 collection: 'publications'

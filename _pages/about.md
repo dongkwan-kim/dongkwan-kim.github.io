@@ -25,7 +25,8 @@ Currently, I am exploring the intersection of graph and language models, with a 
 
 ## Education
 
-- M.S. School of Computing, *KAIST*, Sep 2019
+- Ph.D. Scool of Computing, *KAIST*, Aug 2025 (Expected)
+- M.S. School of Computing, *KAIST*, Aug 2019
 - B.S. Major in Computer Science and Minor in Chemistry, *KAIST*, Feb 2018
 
 ## Talks & Presentations

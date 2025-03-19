@@ -1,6 +1,6 @@
 ---
 title: 'Chrome Extensions for Computer Science Graduate Students'
-date: 2024-03-19
+date: 2025-03-19
 permalink: /blogs/chrome-extensions-for-computer-science-grads/
 tags:
   - General Computer Science & Engineering

@@ -9,7 +9,7 @@
 3. Set up spreadsheet-to-markdown pipelines.
  - (Recommended) Download 'Data for CV (Dongkwan Kim).xlsx' into `./build_contents`.
  - Or create [credentials](https://docs.gspread.org/en/v4.0.1/oauth2.html#oauth-client-id) and put it to `~/.config/gspread/credentials.json`.
-4. Run `./_build_contents/build_homepage_md.py` (for the homepage) and `./_build_contents/build_cv_tex.py` (for the CV).
+4. Run `./_build_contents/build_homepage_md.py` (for the homepage) and `./_build_contents/build_cv_tex.py` (for the [CV (this template)](https://www.overleaf.com/latex/examples/academic-cv-template/hvjpfjnyggbf)).
 5. Commit the changes.
 
 ### To run locally (not on GitHub Pages, to serve on your own computer)

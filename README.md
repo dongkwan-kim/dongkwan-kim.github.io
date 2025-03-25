@@ -30,10 +30,12 @@
 
 ### Hard-Coded Customization
 
-- Color themes: `./_sass/_variables.scss#L58`.
-- Blogs: `./_posts`.
-- Google AdSense: `./_includes/adsense.html` and `./ads.txt`.
+You have to change the below contents with yours.
 
+- Color themes: https://github.com/dongkwan-kim/dongkwan-kim.github.io/blob/master/_sass/_variables.scss#L58-L103
+- Blogs: https://github.com/dongkwan-kim/dongkwan-kim.github.io/tree/master/_posts
+- Google AdSense: [`./_includes/adsense.html`](https://github.com/dongkwan-kim/dongkwan-kim.github.io/blob/master/_includes/adsense.html) and [`./ads.txt`.](https://github.com/dongkwan-kim/dongkwan-kim.github.io/blob/master/ads.txt)
+- Thumbnails & favicons: https://github.com/dongkwan-kim/dongkwan-kim.github.io/tree/master/images
 ---
 
 ## Original Readme

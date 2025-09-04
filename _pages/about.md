@@ -8,11 +8,9 @@ redirect_from:
   - /about.html
 ---
 
-I am a Ph.D. student at the [KAIST](https://www.kaist.ac.kr/en) [School of Computing](https://cs.kaist.ac.kr), working under the supervision of Prof. [Alice Oh](https://aliceoh9.github.io/). The goal of my research is to understand relational or structured data in nature by leveraging the vast repository of human knowledge encoded in languages. In my work, I integrate diverse data types, such as graphs and texts, in a machine learning system. This allows me to represent complex structures and uncover novel interactions in the real world's biological, political, and social systems. In my work, I use cutting-edge methods such as graph neural networks (GNNs), large language models (LLMs), and their intersected pipelines.
+I am a postdoctoral researcher at [Texas A&M University](https://www.tamu.edu/), working with Prof. [Yang Shen](https://shen-lab.github.io/). My research aims to build foundational models for biology and chemistry that understand and integrate multiple data modalities such as graphs and texts. The goal of my work is to accelerate scientific discovery by enabling AI systems to reason over complex relational and hierarchical structures found in biological, chemical, and biomedical domains.
 
-Specifically, my early research covered graph representation learning methods to leverage pairwise and higher-order interactions for graph-structured data (edges [[C2](https://openreview.net/forum?id=Wi5KUNlqWty)], partial subgraphs [[C3](https://dl.acm.org/doi/10.1145/3511808.3557647)], subgraphs [[C4](https://arxiv.org/abs/2204.04510)], and k-hop subgraphs [[C6](https://openreview.net/forum?id=HZgZrtIreg)]).
-
-Currently, I am exploring the intersection of graph and language models, with a focus on discovering latent structures in unstructured language data. My ongoing works are 1) searching gene interactions regulating Multiple Sclerosis from single-cell RNA-seq data, 2) developing multi-cultural LLMs by leveraging relations between cultures [[W5](https://openreview.net/forum?id=KsAfPGPZZn)], and 3) analyzing memorization and forgetting dynamics of LLMs, and 4) decoding competing interests in U.S. lobbying networks [[P2](https://arxiv.org/abs/2504.15333)].
+During my Ph.D. at [KAIST](https://www.kaist.ac.kr/en) [School of Computing](https://cs.kaist.ac.kr), advised by Prof. [Alice Oh](https://aliceoh9.github.io/), I studied representation learning for structured data, focusing on the intersection of graph neural networks (GNNs) and large language models (LLMs). My Ph.D. research contributed to graph representation learning methods that leverage pairwise and higher-order interactions for graph-structured data (edges [[C2](https://openreview.net/forum?id=Wi5KUNlqWty)], partial subgraphs [[C3](https://dl.acm.org/doi/10.1145/3511808.3557647)], subgraphs [[C4](https://arxiv.org/abs/2204.04510)], and k-hop subgraphs [[C6](https://openreview.net/forum?id=HZgZrtIreg)]).
 
 ## Selected Publications ([See all](/publications))
 
@@ -25,7 +23,7 @@ Currently, I am exploring the intersection of graph and language models, with a 
 
 ## Education
 
-- Ph.D. School of Computing, *KAIST*, Aug 2025 (Expected)
+- Ph.D. School of Computing, *KAIST*, Aug 2025
 - M.S. School of Computing, *KAIST*, Aug 2019
 - B.S. Major in Computer Science and Minor in Chemistry, *KAIST*, Feb 2018
 

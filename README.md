@@ -17,14 +17,16 @@
 1. Clone the repository and made updates as detailed above
 1. Make sure you have ruby-dev, bundler, and nodejs installed:
       ```
+      # ubuntu
       sudo apt install ruby-dev ruby-bundler nodejs
       
+      # macos
       brew install ruby
       brew install node
       gem install bundler
       ```
 1. `echo 'export PATH="/opt/homebrew/opt/ruby/bin:$PATH"' >> ~/.zshrc`
-1. Run `bundle clean` to clean up the directory (no need to run `--force`)
+1. Run `bundle clean` to clean up the directory (add `--force` if it does not work)
 1. Run `bundle install` to install ruby dependencies. If you get errors, delete Gemfile.lock and try again.
 1. Run `bundle exec jekyll serve` to generate the HTML and serve it from `localhost:4000` the local server will automatically rebuild and refresh the pages on change.
 
@@ -33,8 +35,8 @@
 You have to change the below contents with yours.
 
 - Color themes: https://github.com/dongkwan-kim/dongkwan-kim.github.io/blob/master/_sass/_variables.scss#L58-L103
-- Blogs: https://github.com/dongkwan-kim/dongkwan-kim.github.io/tree/master/_posts
-- Google AdSense: [`./_includes/adsense.html`](https://github.com/dongkwan-kim/dongkwan-kim.github.io/blob/master/_includes/adsense.html) and [`./ads.txt`.](https://github.com/dongkwan-kim/dongkwan-kim.github.io/blob/master/ads.txt)
+- Blogs (Remove all existing posts, and start your own): https://github.com/dongkwan-kim/dongkwan-kim.github.io/tree/master/_posts
+- Google AdSense): [`./_includes/adsense.html`](https://github.com/dongkwan-kim/dongkwan-kim.github.io/blob/master/_includes/adsense.html) (If you don't need AdSense, leave this file blank) and [`./ads.txt`.](https://github.com/dongkwan-kim/dongkwan-kim.github.io/blob/master/ads.txt)
 - Thumbnails & favicons: https://github.com/dongkwan-kim/dongkwan-kim.github.io/tree/master/images
 ---
 

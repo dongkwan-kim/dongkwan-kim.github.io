@@ -50,21 +50,23 @@ $type-size-8                : 0.625em;  // ~10px
    ========================================================================== */
 
 $gray                       : #7a8288;
-$dark-gray                  : mix(#000, $gray, 40%);
-$darker-gray                : mix(#000, $gray, 60%);
-$light-gray                 : mix(#fff, $gray, 50%);
-$lighter-gray               : mix(#fff, $gray, 90%);
+$dark-gray                  : #4a4e51;
+$darker-gray                : #313336;
+$my-gray                    : #424242;  
+$light-gray                 : #b9bdc0;
+$lighter-gray               : #f6f7f7;
 
-/* https://color.adobe.com/ted-Prelim-Them-color-theme-10894718/ */
-$my-primary-color: #479FB0;
-$my-secondary-color: #FFDE9B;
 
-$body-color                 : #101410;
+$my-primary-color: #a67f68;
+$my-secondary-color: #ff6f00;
+$strong-text-color: #212121;
+
+$body-color                 : #ffffff;
 $background-color           : $body-color;
-$code-background-color      : #000000;
+$code-background-color      : #ffffff;
 $code-background-color-dark : $light-gray;
-$text-color                 : #ffffffbf;
-$border-color               : $lighter-gray;
+$text-color                 : $my-gray;
+$border-color               : $my-gray;
 
 $primary-color              : #7a8288;
 $success-color              : #62c462;
@@ -78,7 +80,7 @@ $dribbble-color             : #ea4c89;
 $facebook-color             : #3b5998;
 $flickr-color               : #ff0084;
 $foursquare-color           : #0072b1;
-$github-color               : $lighter-gray;
+$github-color               : $dark-gray;
 $google-plus-color          : #dd4b39;
 $instagram-color            : #517fa4;
 $lastfm-color               : #d51007;
@@ -99,8 +101,9 @@ $xing-color                 : #006567;
 $link-color                 : $my-primary-color;
 $link-color-hover           : mix(#fff, $my-secondary-color, 40%);
 $link-color-visited         : mix(#000, $my-secondary-color, 25%);
-$masthead-link-color        : #fff;
-$masthead-link-color-hover  : mix(#000, $masthead-link-color, 25%);
+$link-text-color            : #fff;
+$masthead-link-color        : $my-gray;
+$masthead-link-color-hover  : #000000;
 
 
 /*

@@ -231,7 +231,7 @@
 
 .page__meta {
   margin-top: 2em;
-  color: mix(#fff, $gray, 25%);
+  color: $my-gray;
   font-family: $sans-serif;
   font-size: $type-size-6;
 
@@ -271,7 +271,7 @@
   margin-bottom: 8px;
   padding: 5px 10px;
   text-decoration: none;
-  border: 1px solid $light-gray;
+  border: 1px solid $my-gray;
   border-radius: $border-radius;
 
   &:hover {

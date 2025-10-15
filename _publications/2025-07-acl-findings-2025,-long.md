@@ -9,6 +9,7 @@ venue: 'Findings of the Association for Computational Linguistics: ACL 2025 (ACL
 type: 'conference'
 summary: '*One-sentence Summary: We propose a new paradigm for evaluating large language models (LLMs), called LLM-as-an-Interviewer.*'
 venueurl: 'https://2025.aclweb.org/'
+paperurl: 'https://aclanthology.org/2025.findings-acl.1357/'
 arxivurl: 'https://arxiv.org/abs/2412.10424'
 codeurl: 'https://github.com/interview-eval/interview-eval'
 ---

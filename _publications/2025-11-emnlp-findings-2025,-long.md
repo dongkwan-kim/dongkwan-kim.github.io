@@ -9,6 +9,7 @@ venue: 'Findings of the Empirical Methods in Natural Language Processing: EMNLP 
 type: 'conference'
 summary: '*One-sentence Summary: A language-agnostic framework that evaluates LLM multilingual generation by measuring task completion rates in self-communication scenarios, enabling objective assessment across 2,100+ languages without requiring language-specific tools or humans.*'
 venueurl: 'https://2025.emnlp.org/'
+paperurl: 'https://aclanthology.org/2025.findings-emnlp.1061/'
 arxivurl: 'https://arxiv.org/abs/2505.14395'
 codeurl: 'https://github.com/seyoungsong/mugeval'
 ---

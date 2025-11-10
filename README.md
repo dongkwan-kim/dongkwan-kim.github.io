@@ -34,7 +34,7 @@
 
 You have to change the below contents with yours.
 
-- Color themes: https://github.com/dongkwan-kim/dongkwan-kim.github.io/blob/master/_sass/_variables.scss#L58-L103
+- Color themes: https://github.com/dongkwan-kim/dongkwan-kim.github.io/blob/master/_sass/_variables.scss#L52-L106
 - Blogs (Remove all existing posts, and start your own): https://github.com/dongkwan-kim/dongkwan-kim.github.io/tree/master/_posts
 - Google AdSense): [`./_includes/adsense.html`](https://github.com/dongkwan-kim/dongkwan-kim.github.io/blob/master/_includes/adsense.html) (If you don't need AdSense, leave this file blank) and [`./ads.txt`.](https://github.com/dongkwan-kim/dongkwan-kim.github.io/blob/master/ads.txt)
 - Thumbnails & favicons: https://github.com/dongkwan-kim/dongkwan-kim.github.io/tree/master/images

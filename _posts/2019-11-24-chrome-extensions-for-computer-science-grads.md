@@ -1,6 +1,6 @@
 ---
 title: 'Chrome Extensions for Computer Science Graduate Students'
-date: 2025-03-19
+date: 2025-11-26
 permalink: /blogs/chrome-extensions-for-computer-science-grads/
 tags:
   - General Computer Science & Engineering
@@ -15,11 +15,17 @@ A list of Chrome Extensions that might be useful to computer science graduate st
 
 Supercharge your paper reading: follow references, skim outline, jump to figures, cite and save.
 
-### [Scholar Highlights](https://chromewebstore.google.com/detail/scholar-highlights/jbmdpjnflbojepjppicneebdikjgkkpf)
+### [Google Scholar Author Highlighter](https://chromewebstore.google.com/detail/google-scholar-author-hig/ijmngekkpaccbbjimedfkjpigplaikah)
 
-Highlights first (and co-first) author publications on Google Scholar.
+Highlights first-author, second-author, co-first-author and last-author papers on Google Scholar profile pages
 
-Note: Uses the Scholar author list, with asterisk (*) denoting co-authorship.
+This extension automatically scans your Google Scholar profile and highlights papers by your authorship role. It detects and color-codes when you are: First author, Second author, Co-first author (symbols such as †, ‡, §, *, #), Last author
+
+### [GScholarLENS](https://chromewebstore.google.com/detail/gscholarlens/lgbaopmimcnpphepmfphadncdofnojnd)
+
+Advanced Insights into Google Scholar Profiles.
+
+GScholarLENS is a browser extension designed for academics, researchers, and enthusiasts who want deeper insights into publication data and contribution of an author from Google Scholar.
 
 ### [Openreview Quicklook](https://chromewebstore.google.com/detail/openreview-quicklook/efoabjckcjahofacmgekfhjadpjlmcap?hl=en&authuser=0)
 
@@ -30,9 +36,6 @@ It is unfriendly to get the submission information quickly, such as the ratings 
 ### [Redirectify](https://chrome.google.com/webstore/detail/redirectify/mhjmbfadcbhilcfdhkkepffbnjaghfie)
 Redirects requests for PDFs of papers at some popular sites to their corresponding HTML index pages.
 (For example, [this pdf link](https://arxiv.org/pdf/1602.07527.pdf) redirects to [this webpage](https://arxiv.org/abs/1602.07527))
-
-### [BibTex It!](https://chrome.google.com/webstore/detail/bibtex-it/hofkoiddldajhihgjbckeffpodeoockc)
-This extension gets your bibtex citation through your text selection within one-click.
 
 ### [Grammarly for Chrome](https://chrome.google.com/webstore/detail/grammarly-for-chrome/kbfnbcaeplbcioakkpcpgfkobkghlhen)
 Use Grammarly on Chrome.
@@ -52,15 +55,15 @@ Create easy-to-navigate code tree in Github, for file browsing and downloads.
 
 ## For Koreans
 
-### [Find Korea from Dropdowns](https://chrome.google.com/webstore/detail/find-korea-from-dropdowns/lfphjcfkgaiiojhbippbghhdikoibedi)
-Find Korea when you go to academic conferences.
+### [KoreaDropdown](https://chromewebstore.google.com/detail/koreadropdown/mfnlknmbkfnlgcjebdogolbakcekohfj)
 
-## Not a Chrome Extension, but Still Useful
-
-### [Auto-LaTeX Equations](https://gsuite.google.com/marketplace/app/autolatex_equations/850293439076?pann=cwsdp&hl=ko)
-Instantly convert every math equation in Google Docs documents into latex images.
+KoreaDropdown은 웹사이트의 드롭다운 메뉴에서 'Korea'를 자동으로 선택하는 크롬 확장 프로그램입니다.
 
 ## I am not using them anymore
+
+### [Scholar Highlights](https://chromewebstore.google.com/detail/scholar-highlights/jbmdpjnflbojepjppicneebdikjgkkpf)
+
+Highlights first (and co-first) author publications on Google Scholar. Note: Uses the Scholar author list, with asterisk (*) denoting co-authorship.
 
 ### [Refined GitHub](https://chrome.google.com/webstore/detail/refined-github/hlepfoohegkhhmjieoechaddaejaokhf)
 Simplifies the GitHub interface and adds useful features
@@ -81,3 +84,9 @@ Stay productive by giving you insights on browsing habits and by notifying.
 ### [Vertical Tabs](https://chrome.google.com/webstore/detail/vertical-tabs/pddljdmihkpdfpkgmbhdomeeifpklgnm)
 Display tabs vertically in a sidebar on web pages. Support drag-and-drop, search, filter on tabs.
 (Sometimes this plugin creates a weird layout.)
+
+### [Find Korea from Dropdowns](https://chrome.google.com/webstore/detail/find-korea-from-dropdowns/lfphjcfkgaiiojhbippbghhdikoibedi)
+Find Korea when you go to academic conferences.
+
+### [Auto-LaTeX Equations](https://gsuite.google.com/marketplace/app/autolatex_equations/850293439076?pann=cwsdp&hl=ko)
+Instantly convert every math equation in Google Docs documents into latex images.

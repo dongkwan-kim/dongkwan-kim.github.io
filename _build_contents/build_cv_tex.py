@@ -122,6 +122,8 @@ def _build_cvpubs(sheet: Spreadsheet, sheet_path_list: List[str], tab_name: str,
         position_and_org_to_rs = defaultdict(lambda: defaultdict(list))
         for i, r in df.iterrows():
             position_and_org_to_rs[r.position][r.organization].append(r)
+        for position, org_to_rs in position_and_org_to_rs.items():
+            position_and_org_to_rs[position] = dict(sorted(org_to_rs.items(), key=lambda item: -len(item[1])))  # pyright: ignore[reportArgumentType]
         lines += [r"\begin{cvpubs}", "\n" * 2]
         for p, o_to_rs in position_and_org_to_rs.items():
             _o_ys = []

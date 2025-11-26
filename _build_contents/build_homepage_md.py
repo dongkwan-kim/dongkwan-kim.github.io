@@ -68,6 +68,15 @@ def build_about(sheet: Spreadsheet, sheet_path_list: List[str],
             dobj = datetime.strptime(r.date, "%Y-%m-%d")
             lines.append(f"- {r.degree}, *{r.institution}*, {dobj.strftime('%b %Y')}\n")
 
+    def _professional_experiences(df: pd.DataFrame):
+        for i, r in df.iterrows():
+            try:
+                dobj = datetime.strptime(r.date, "%Y-%m-%d")
+            except:
+                dobj = r.date.replace("--", "-")
+            # TODO: link for institution
+            lines.append(f"- {r.role}, *{r.institution}*, {dobj}\n")
+
     def _academic_services(df: pd.DataFrame):
         position_and_org_to_rs = defaultdict(lambda: defaultdict(list))
         for i, r in df.iterrows():

@@ -32,9 +32,9 @@ def change_md_list_to_tex_list(md_one_paragraph: str) -> str:
 
 
 def change_md_formatting_to_tex_formatting(md: str) -> str:
-
     md = re.sub(r'\*\*(.+)\*\*', r'\\textbf{\1}', md)
     md = re.sub(r'\*(.+)\*', r'\\textit{\1}', md)
+    md = md.replace("&", "\&")
     return md
 
 
@@ -67,12 +67,16 @@ def _build_cventry(sheet: Spreadsheet, sheet_path_list: List[str], tab_name: str
         lines += [" " * 2, r"\cventry", "\n"]
         for ik, k in enumerate(keys):
             if ik < 3:
-                _l = f"{{{getattr(r, k)}}} % {k}"
-            if ik == 3:  # date
-                _d = datetime.strptime(getattr(r, k), "%Y-%m-%d").strftime(out_date_format)
+                _o = change_md_to_tex(getattr(r, k))
+                _l = f"{{{_o}}} % {k}"
+            elif ik == 3:  # date
+                try:
+                    _d = datetime.strptime(getattr(r, k), "%Y-%m-%d").strftime(out_date_format)
+                except:
+                    _d = getattr(r, k)
                 _l = f"{{{_d}}} % {k}"
             else:  # bullets
-                _l = f"{{{getattr(r, k)}}} % {k}" if getattr(r, k) != "" else r"{}\vspace{-1em}"
+                _l = f"{{{getattr(r, k)}}} % {k}" if getattr(r, k) != "" else r"{}\vspace{-0.5em}"
             lines += [" " * 4, _l, "\n"]
 
         lines.append("\n")
@@ -212,6 +216,12 @@ if __name__ == '__main__':
                              keys=["degree", "institution", "location", "date", "bullets"],
                              out_date_format="%b %Y")
         save_lines(tex, __dir__, "education.tex")
+
+    if __target__ == "professional" or __target__ == "all":
+        tex = _build_cventry(sh, [__path_1__], "professional experiences",
+                             keys=["role", "institution", "location", "date", "bullets"],
+                             out_date_format="%b %Y")
+        save_lines(tex, __dir__, "professional.tex")
 
     if __target__ == "publications" or __target__ == "all":
         tex = _build_cvpubs(sh, [__path_1__], "publications")

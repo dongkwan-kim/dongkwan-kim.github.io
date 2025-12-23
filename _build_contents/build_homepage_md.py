@@ -82,7 +82,14 @@ def build_about(sheet: Spreadsheet, sheet_path_list: List[str],
         for i, r in df.iterrows():
             position_and_org_to_rs[r.position][r.organization].append(r)
         for position, org_to_rs in position_and_org_to_rs.items():
-            position_and_org_to_rs[position] = dict(sorted(org_to_rs.items(), key=lambda item: -len(item[1])))  # pyright: ignore[reportArgumentType]
+            for org, rs in org_to_rs.items():
+                org_to_rs[org] = sorted(rs, key=lambda r: r.year, reverse=True)
+        for position, org_to_rs in position_and_org_to_rs.items():
+            position_and_org_to_rs[position] = dict(sorted(  # pyright: ignore[reportArgumentType]
+                org_to_rs.items(),
+                key=lambda item: (len(item[1]), item[1][0].year),
+                reverse=True,
+            ))
         for p, o_to_rs in position_and_org_to_rs.items():
             _o_ys = []
             for o, rs in o_to_rs.items():

@@ -34,12 +34,13 @@ layout: default
         <p class="page__date"><i class="fa fa-fw fa-calendar" aria-hidden="true"></i> {{ site.data.ui-text[site.locale].date_label | default: "Published:" }} <time datetime="{{ page.modified | date: "%Y-%m-%d" }}">{{ page.modified | date: "%B %d, %Y" }}</time></p>
         {% endif %}
         
-        {% if page.paperurl %}
+        {% if page.paperurl or page.arxivurl or page.codeurl or page.dataurl or page.posterurl or page.slideurl %}
         <p class="link-buttons">
           <a href=" {{ page.paperurl }} " target="_blank">Paper</a>
           {% if page.arxivurl %}<a href=" {{ page.arxivurl }} " target="_blank">arXiv</a>{% endif %}
           {% if page.codeurl %}<a href=" {{ page.codeurl }} " target="_blank">Code</a>{% endif %}
           {% if page.dataurl %}<a href=" {{ page.dataurl }} " target="_blank">Data</a>{% endif %}
+          {% if page.hfurl %}<a href=" {{ page.hfurl }} " target="_blank">HuggingFace</a>{% endif %}
           {% if page.posterurl %}<a href=" {{ page.posterurl }} " target="_blank">Poster</a>{% endif %}
           {% if page.slideurl %}<a href=" {{ page.slideurl }} " target="_blank">Slide</a>{% endif %}
         </p>

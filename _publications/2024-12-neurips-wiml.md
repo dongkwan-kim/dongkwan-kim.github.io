@@ -9,6 +9,6 @@ venue: 'Workshop for Women in Machine Learning at NeurIPS (NeurIPS WiML)'
 type: 'workshop'
 summary: ''
 venueurl: 'https://sites.google.com/wimlworkshop.org/wiml-2024/program'
-slideurl: 'https://drive.google.com/file/d/193akhuSIJF22uvc2MUe_2XYJYQtfhM01/view'
+posterurl: 'https://drive.google.com/file/d/193akhuSIJF22uvc2MUe_2XYJYQtfhM01/view'
 ---
 

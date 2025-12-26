@@ -31,9 +31,9 @@ def _build_md_files(sheet: Spreadsheet, sheet_path_list: List[str], name: str, o
             return f'{k}: "{v}"'
 
     for i, r in tab.iterrows():
-        ym = re.compile(r"\d\d\d\d-\d\d").search(r.date).group()
+        ym = re.compile(r"\d\d\d\d-\d\d").search(r.date).group()  # pyright: ignore[reportOptionalMemberAccess]
         try:
-            sv = re.compile(r"\((.*?)\)").search(r.venue).group(1)
+            sv = re.compile(r"\((.*?)\)").search(r.venue).group(1)  # pyright: ignore[reportOptionalMemberAccess]
         except AttributeError:
             sv = r.venue
         file_name = f"{ym}-{sv.replace(' ', '-').replace('/', '').lower()}.md"
@@ -101,11 +101,19 @@ def build_about(sheet: Spreadsheet, sheet_path_list: List[str],
         course_to_rs = defaultdict(list)
         for i, r in df.iterrows():
             course_to_rs[r.course].append(r)
+        course_to_rs = dict(sorted(
+            course_to_rs.items(),
+            key=lambda item: max(int(r.year) for r in item[1]),
+            reverse=True,
+        ))
         for c, rs in course_to_rs.items():
             positions = [r.position for r in rs]
             positions = set(positions) if len(set(positions)) == 1 else positions
             head = ", ".join(positions)
-            semesters = ", ".join(f"{r.semester}" if r.url == "" else f"[{r.semester}]({r.url})" for r in rs)
+            semesters = ", ".join(
+                f"{r.semester} {r.year}" if r.url == "" else f"[{r.semester} {r.year}]({r.url})"
+                for r in sorted(rs, key=lambda r: (-int(r.year), r.semester), reverse=False)
+            )
             notes = ", ".join(r.note for r in rs if r.note != "")
             if notes == "":
                 lines.append(f"- {head} of {c} ({semesters})\n")

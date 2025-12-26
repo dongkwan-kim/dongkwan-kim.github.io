@@ -126,7 +126,7 @@ def _build_cvpubs(sheet: Spreadsheet, sheet_path_list: List[str], tab_name: str,
             for org, rs in org_to_rs.items():
                 org_to_rs[org] = sorted(rs, key=lambda r: r.year, reverse=True)
         for position, org_to_rs in position_and_org_to_rs.items():
-            position_and_org_to_rs[position] = dict(sorted( # pyright: ignore[reportArgumentType]
+            position_and_org_to_rs[position] = dict(sorted(  # pyright: ignore[reportArgumentType]
                 org_to_rs.items(),
                 key=lambda item: (len(item[1]), item[1][0].year),
                 reverse=True,
@@ -146,13 +146,20 @@ def _build_cvpubs(sheet: Spreadsheet, sheet_path_list: List[str], tab_name: str,
         course_to_rs = defaultdict(list)
         for i, r in df.iterrows():
             course_to_rs[r.course].append(r)
+        course_to_rs = dict(sorted(
+            course_to_rs.items(),
+            key=lambda item: max(int(r.year) for r in item[1]),
+            reverse=True,
+        ))
         lines += [r"\begin{cvpubs}", "\n" * 2]
         for c, rs in course_to_rs.items():
             positions = [r.position for r in rs]
             positions = set(positions) if len(set(positions)) == 1 else positions
             head = rf'\textbf{{{", ".join(positions)}:}}'
-            semesters = ", ".join(f"{r.semester}" if r.url == ""
-                                  else rf"\href{{{r.url}}}{{{r.semester}}}" for r in rs)
+            semesters = ", ".join(
+                f"{r.semester} {r.year}" if r.url == "" else rf"\href{{{r.url}}}{{{r.semester} {r.year}}}"
+                for r in sorted(rs, key=lambda r: (-int(r.year), r.semester), reverse=False)
+            )
             notes = ", ".join(r.note for r in rs if r.note != "")
             if notes == "":
                 lines += [rf"  \cvpub{{{head} {c} ({semesters})}}", "\n" * 2]
@@ -250,6 +257,6 @@ if __name__ == '__main__':
 
     if __target__ == "honors" or __target__ == "all":
         tex = _build_cvhonor(sh, [__path_1__], "honors",
-                             keys=["title", "organization", None, "date"],
+                             keys=["title", "organization", None, "date"],  # pyright: ignore[reportArgumentType]
                              out_date_format="%Y")
         save_lines(tex, __dir__, "honors.tex")

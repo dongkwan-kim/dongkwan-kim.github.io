@@ -4,7 +4,12 @@ from typing import List
 from build_homepage_md import *
 
 
+def escape_latex_ampersand(text: str) -> str:
+    return re.sub(r"(?<!\\)&", r"\\&", text)
+
+
 def save_lines(lines, output_dir, output_name):
+    lines = [escape_latex_ampersand(line) for line in lines]
     full_path = os.path.join(output_dir, output_name)
     with open(full_path, "w") as f:
         f.writelines(lines)
@@ -34,7 +39,7 @@ def change_md_list_to_tex_list(md_one_paragraph: str) -> str:
 def change_md_formatting_to_tex_formatting(md: str) -> str:
     md = re.sub(r'\*\*(.+)\*\*', r'\\textbf{\1}', md)
     md = re.sub(r'\*(.+)\*', r'\\textit{\1}', md)
-    md = md.replace("&", "\&")
+    md = escape_latex_ampersand(md)
     return md
 
 
@@ -169,6 +174,8 @@ def _build_cvpubs(sheet: Spreadsheet, sheet_path_list: List[str], tab_name: str,
 
     tab = get_tab_df(sheet, sheet_path_list, tab_name)
     func_name = "_" + tab_name.replace(" ", "_")
+    if tab_name == "talks and presentations":
+        func_name = "_talks"
 
     lines = [rf"\cvsection{{{tab_name.title()}}}", "\n" * 2]
     locals()[func_name](tab, lines, "type")
@@ -244,7 +251,7 @@ if __name__ == '__main__':
         save_lines(tex, __dir__, "publications.tex")
 
     if __target__ == "talks" or __target__ == "all":
-        tex = _build_cvpubs(sh, [__path_1__], "talks")
+        tex = _build_cvpubs(sh, [__path_1__], "talks and presentations")
         save_lines(tex, __dir__, "talks.tex")
 
     if __target__ == "services" or __target__ == "all":

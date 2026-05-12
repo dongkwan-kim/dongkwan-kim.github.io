@@ -57,7 +57,7 @@ def build_publications(sheet: Spreadsheet, sheet_path_list: List[str],
 
 def build_talks(sheet: Spreadsheet, sheet_path_list: List[str],
                 output_dir="../_talks/"):
-    _build_md_files(sheet, sheet_path_list, "talks", output_dir)
+    _build_md_files(sheet, sheet_path_list, "talks and presentations", output_dir)
 
 
 def build_about(sheet: Spreadsheet, sheet_path_list: List[str],

@@ -4,7 +4,7 @@ title: 'PertReasonQA: A Knowledge-Grounded Benchmark and Framework for Cell-Stat
 authors: 'Dongkwan Kim, Yiming Gao, Yining Yang, Yang Shen'
 collection: 'publications'
 permalink: '/publications/2026-07-icml-fm4ls'
-date: '2026-07-06'
+date: '2026-07-01'
 venue: 'Workshop on Multi-modal Foundation Models and Large Language Models for Life Sciences at ICML (ICML FM4LS)'
 type: 'workshop'
 summary: '*One-sentence Summary: We propose PertReasonQA, a knowledge-grounded QA benchmark designed to evaluate how models mechanistically reason through cell-state-specific perturbation effects by leveraging causal pathways.*'

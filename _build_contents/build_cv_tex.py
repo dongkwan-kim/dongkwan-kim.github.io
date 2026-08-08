@@ -8,6 +8,10 @@ def escape_latex_ampersand(text: str) -> str:
     return re.sub(r"(?<!\\)&", r"\\&", text)
 
 
+def escape_latex_url(url: str) -> str:
+    return re.sub(r"(?<!\\)#", r"\\#", url)
+
+
 def save_lines(lines, output_dir, output_name):
     lines = [escape_latex_ampersand(line) for line in lines]
     full_path = os.path.join(output_dir, output_name)
@@ -19,7 +23,7 @@ def save_lines(lines, output_dir, output_name):
 
 def change_md_href_to_tex_href(md: str) -> str:
     for text, link in re.findall(r"\[(.+?)\]\((.+?)\)", md):
-        tex_link = f"\\href{{{link}}}{{{text}}}"
+        tex_link = f"\\href{{{escape_latex_url(link)}}}{{{text}}}"
         md_link = f"[{text}]({link})"
         md = md.replace(md_link, tex_link)
     return md
@@ -108,7 +112,7 @@ def _build_cvpubs(sheet: Spreadsheet, sheet_path_list: List[str], tab_name: str,
 
                 _authors = r.authors.replace(me, rf"\textbf{{{me}}}")
                 _year = datetime.strptime(r.date, "%Y-%m-%d").strftime("%Y")
-                url = r.paperurl or r.arxivurl
+                url = escape_latex_url(r.paperurl or r.arxivurl)
                 _pub = rf'[{_prefix}] {_authors}. \href{{{url}}}{{``{r.title}."}} \textit{{{r.venue}}}. {_year}'
                 lines += [rf"  \cvpub{{{_pub}}}", "\n" * 2]
             lines += [r"\end{cvpubs}", "\n" * 2]
@@ -118,8 +122,10 @@ def _build_cvpubs(sheet: Spreadsheet, sheet_path_list: List[str], tab_name: str,
         for i, r in sorted(df.iterrows(), key=lambda _ir: _ir[1].date, reverse=True):
             _presenters = r.presenters.replace(me, rf"\textbf{{{me}}}")
             _date = datetime.strptime(r.date, "%Y-%m-%d").strftime("%d %b %Y")
-            _venue = rf'\href{{{r.venueurl}}}{{{r.venue}}}'
-            _talk = rf'{_presenters}. \href{{{r.slideurl}}}{{``{r.title}."}} \textit{{{_venue}}}. {_date}'
+            venue_url = escape_latex_url(r.venueurl)
+            slide_url = escape_latex_url(r.slideurl)
+            _venue = rf'\href{{{venue_url}}}{{{r.venue}}}'
+            _talk = rf'{_presenters}. \href{{{slide_url}}}{{``{r.title}."}} \textit{{{_venue}}}. {_date}'
             lines += [rf"  \cvpub{{{_talk}}}", "\n" * 2]
         lines += [r"\end{cvpubs}"]
 
@@ -140,8 +146,11 @@ def _build_cvpubs(sheet: Spreadsheet, sheet_path_list: List[str], tab_name: str,
         for p, o_to_rs in position_and_org_to_rs.items():
             _o_ys = []
             for o, rs in o_to_rs.items():
-                _years = [f"{r.year}" if r.url == "" else rf"\href{{{r.url}}}{{{r.year}}}" for r in rs]
-                _years = [y.replace("#", "\#") for y in _years]
+                _years = [
+                    f"{r.year}" if r.url == ""
+                    else rf"\href{{{escape_latex_url(r.url)}}}{{{r.year}}}"
+                    for r in rs
+                ]
                 _o_ys.append(f"{o} ({', '.join(_years)})")
             one_line = rf"\textbf{{{p}:}} {', '.join(_o_ys)}"
             lines.append(rf"  \cvpub{{{one_line}}}" + "\n" * 2)
@@ -162,7 +171,8 @@ def _build_cvpubs(sheet: Spreadsheet, sheet_path_list: List[str], tab_name: str,
             positions = set(positions) if len(set(positions)) == 1 else positions
             head = rf'\textbf{{{", ".join(positions)}:}}'
             semesters = ", ".join(
-                f"{r.semester} {r.year}" if r.url == "" else rf"\href{{{r.url}}}{{{r.semester} {r.year}}}"
+                f"{r.semester} {r.year}" if r.url == ""
+                else rf"\href{{{escape_latex_url(r.url)}}}{{{r.semester} {r.year}}}"
                 for r in sorted(rs, key=lambda r: (-int(r.year), r.semester), reverse=False)
             )
             notes = ", ".join(r.note for r in rs if r.note != "")
@@ -197,7 +207,7 @@ def _build_cvhonor(sheet: Spreadsheet, sheet_path_list: List[str], tab_name: str
                 _l = "{} % None"
             elif ik < 3:
                 if k == "title" and r.url != "":
-                    tex_link = f"\\href{{{r.url}}}{{{getattr(r, k)}}}"
+                    tex_link = f"\\href{{{escape_latex_url(r.url)}}}{{{getattr(r, k)}}}"
                     _l = f"{{{tex_link}}} % {k}"
                 else:
                     _l = f"{{{getattr(r, k)}}} % {k}"

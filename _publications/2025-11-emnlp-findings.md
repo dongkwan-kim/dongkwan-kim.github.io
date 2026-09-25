@@ -5,7 +5,7 @@ authors: 'Seyoung Song, Seogyeong Jeong, Eunsu Kim, Jiho Jin, Dongkwan Kim, Jay 
 collection: 'publications'
 permalink: '/publications/2025-11-emnlp'
 date: '2025-11-04'
-venue: 'Findings of the Empirical Methods in Natural Language Processing: EMNLP 2025 (EMNLP-Findings 2025, Long)'
+venue: 'Findings of the Empirical Methods in Natural Language Processing: EMNLP 2025 (EMNLP-Findings)'
 type: 'conference'
 summary: '*One-sentence Summary: A language-agnostic framework that evaluates LLM multilingual generation by measuring task completion rates in self-communication scenarios, enabling objective assessment across 2,100+ languages without requiring language-specific tools or humans.*'
 venueurl: 'https://2025.emnlp.org/'

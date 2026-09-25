@@ -5,7 +5,7 @@ authors: 'Eunsu Kim, Juyoung Suk, Seungone Kim, Niklas Muennighoff, Dongkwan Kim
 collection: 'publications'
 permalink: '/publications/2025-07-acl'
 date: '2025-07-27'
-venue: 'Findings of the Association for Computational Linguistics: ACL 2025 (ACL-Findings 2025, Long)'
+venue: 'Findings of the Association for Computational Linguistics: ACL 2025 (ACL-Findings)'
 type: 'conference'
 summary: '*One-sentence Summary: We propose a new paradigm for evaluating large language models (LLMs), called LLM-as-an-Interviewer.*'
 venueurl: 'https://2025.aclweb.org/'

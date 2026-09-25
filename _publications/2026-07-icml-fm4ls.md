@@ -1,5 +1,5 @@
 ---
-selected: '1.0'
+selected: ''
 title: 'PertReasonQA: A Knowledge-Grounded Benchmark and Framework for Cell-State–Conditioned Mechanistic Reasoning of Perturbation Effects'
 authors: 'Dongkwan Kim, Yiming Gao, Yining Yang, Yang Shen'
 collection: 'publications'

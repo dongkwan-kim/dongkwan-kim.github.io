@@ -25,6 +25,11 @@
 
   .page__inner-wrap {
     @include full();
+    
+    // desktop only, to avoid horizontal scroll on mobile
+    @include breakpoint($large) {
+      width: 102%;
+    }
 
     .page__content,
     .page__meta,

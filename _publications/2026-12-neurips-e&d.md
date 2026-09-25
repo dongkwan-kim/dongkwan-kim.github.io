@@ -1,0 +1,15 @@
+---
+selected: '1.0'
+title: 'PertReason: A Knowledge-Grounded Benchmark and Framework for Cell-State-Conditioned Mechanistic Reasoning of Perturbation Effects'
+authors: 'Dongkwan Kim*, Yiming Gao*, Yining Yang, Yang Shen'
+collection: 'publications'
+permalink: '/publications/2026-12-neurips'
+date: '2026-12-06'
+venue: 'Neural Information Processing Systems Evaluations & Datasets Track (NeurIPS E&D)'
+type: 'conference'
+summary: '*One-sentence Summary: We propose PertReason, a knowledge-grounded QA benchmark designed to evaluate how models mechanistically reason through cell-state-specific perturbation effects by leveraging causal pathways.*'
+venueurl: 'https://neurips.cc/Conferences/2026'
+arxivurl: 'https://arxiv.org/abs/2607.18777'
+---
+
+Evaluating machine learning in scientific domains requires separating correct predictions from correct reasons under realistic distribution shifts. We introduce PertReason, a knowledge-grounded benchmark and framework suite for cell-state--conditioned reasoning about perturbation effects. At its core, PertReasonQA is a benchmark that tests whether models can generate mechanistically faithful explanations while remaining robust to complex shifts, such as new cells and unseen perturbations. PertReasonQA combines single-cell genetic and chemical perturbation data across multiple cellular contexts with knowledge graphs, and dynamically conditions pathways on cell-specific basal states to avoid generic memorization. Evaluations on state-of-the-art models reveal systematic gaps between predictive accuracy and mechanistic reasoning. Specifically, these models exhibit failure modes largely invisible to standard benchmarks, such as deriving correct answers through flawed logic, ignoring cellular context, and generating directionally inconsistent mechanisms. As a reference probe of the benchmark, we present PertReasonLM, a large language model trained to align outcome predictions with context-specific mechanistic reasoning. Our model targets the identified failure modes by grounding rationales in context-specific pathways and tightening agreement between outcomes and mechanisms. Together, we provide a diagnostic framework for exposing and mitigating failures in faithful reasoning in data-rich scientific systems.
